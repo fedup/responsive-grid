@@ -1,0 +1,97 @@
+$rg-width: 960px;
+$rg-font-size: 16px;
+$rg-spacing: 0 5px 10px 20px 40px 60px;
+
+// Components
+// -----------------------------------------------------------------
+
+@import "fedup-fractional-widths/index";
+@import "fedup-spacing-classes/index";
+
+// Grid Framework
+// -----------------------------------------------------------------
+
+@import "./lib/base";
+
+// Mixins
+// -----------------------------------------------------------------
+
+@mixin rg-VisibilityClasses($columns) {
+  .rg-invisibleAt#{$columns},
+  .rg-hiddenAt#{$columns} {
+    display: none !important;
+  }
+  .rg-visibleAt#{$columns},
+  .rg-blockAt#{$columns} {
+    display: block !important;
+  }
+  .rg-inlineBlockAt#{$columns} {
+    display: inline-block !important;
+  }
+  .rg-inlineAt#{$columns} {
+    display: inline !important;
+  }
+  .rg-textCenterAt#{$columns} {
+    text-align: center;
+  }
+  .rg-textLeftAt#{$columns} {
+    text-align: left;
+  }
+
+  .rg-textRightAt#{$columns} {
+    text-align: right;
+  }
+}
+
+@mixin rg-Classes($columns) {
+  html:before {
+    content: "#{$columns}";
+  }
+  .rg-centerAt#{$columns} {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include rg-VisibilityClasses($columns);
+  @include FractionalWidths($columns, $prefix: 'rg-');
+  @include Spacing($rg-spacing, $prefix: 'rg-', $suffix: "at#{$columns}");
+}
+
+// Breakpoints
+// -----------------------------------------------------------------
+
+// 320px
+@media (min-width: 1em) {
+  @include rg-Classes(4);
+}
+
+// 480px
+@media (min-width: 30em) {
+  @include rg-Classes(6);
+}
+
+// 640px
+@media (min-width: 40em) {
+  @include rg-Classes(8);
+}
+
+// 800px
+@media (min-width: 50em) {
+  @include rg-Classes(10);
+}
+
+// 960px
+@media (min-width: 60em) {
+  @include rg-Classes(12);
+}
+
+// Fallback
+// -----------------------------------------------------------------
+
+.no-mediaqueries,
+.no-js {
+  @include rg-Classes(4);
+  @include rg-Classes(6);
+  @include rg-Classes(8);
+  @include rg-Classes(10);
+  @include rg-Classes(12);
+}
