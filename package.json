@@ -1,0 +1,20 @@
+{
+  "name": "responsive-grid",
+  "version": "1.0.0",
+  "description": "A super flexible grid utilising classes in the markup.",
+  "main": "index.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fedup/responsive-grid.git"
+  },
+  "keywords": [
+    "responsive",
+    "grid"
+  ],
+  "author": "FedUp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fedup/responsive-grid/issues"
+  },
+  "homepage": "https://github.com/fedup/responsive-grid"
+}
