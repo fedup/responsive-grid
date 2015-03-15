@@ -1,5 +1,5 @@
 {
-  "name": "responsive-grid",
+  "name": "fedup-responsive-grid",
   "version": "1.0.0",
   "description": "A super flexible grid utilising classes in the markup.",
   "main": "index.css",
