@@ -5,6 +5,10 @@ We use a responsive grid component to build all of the layouts on the site. This
 ## Installation
 
 ```
+npm install --saveb fedup-responsive-grid
+```
+
+```
 component install fed-up/responsive-grid
 ```
 
@@ -23,7 +27,7 @@ With these it is possible to create layouts for any device without needing to wr
 
 The grid itself consists of 12 columns with a max width of 960px. The grid has no gutters and the columns sit flush against each other. The reason for this is that we can use fixed percentages for the widths of columns, for example, with 2 columns, each column is 50%. Using percentages this way means the grid is responsive. The width of the grid can change, but those two columns will always be 2 columns.
 
-This is possible because of the `box-sizing:border-box` property. This allows us to then add padding and border to the columns without making the columns wider. 
+This is possible because of the `box-sizing:border-box` property. This allows us to then add padding and border to the columns without making the columns wider.
 
 ### Class Prefixes
 
@@ -57,7 +61,7 @@ This will make the div 1 column wide when there are 12 columns available. If we 
 <div class="rg-2of10"></div>
 ```
 
-This will no be 2 columns wide when there are 10 columns available. This is between 800px and 960px. 
+This will no be 2 columns wide when there are 10 columns available. This is between 800px and 960px.
 
 These classes are available for each breakpoint, for example:
 
@@ -101,7 +105,7 @@ The `rg-Unit` class makes the element inline-block and the `rg-Grid` class makes
 
 ### Page Class
 
-Most of the time you don't want the grid sitting on the left of the screen. For this you want to center everything in the middle of the page and set the max width of the grid. 
+Most of the time you don't want the grid sitting on the left of the screen. For this you want to center everything in the middle of the page and set the max width of the grid.
 
 ```html
 <div class="rg-Page"> <!-- Centers the grid -->
@@ -142,7 +146,7 @@ The spacing classes are used to add padding and margin at different breakpoints.
 <div class="rg-pt4at4"></div>
 ```
 
-There are two types of spacing classes - margin and padding. Then spacing can be applied on all sides, top, left, bottom, right, horizontally (left and right) and vertically (top and bottom). 
+There are two types of spacing classes - margin and padding. Then spacing can be applied on all sides, top, left, bottom, right, horizontally (left and right) and vertically (top and bottom).
 
 They can then be multiple sizes: `0px, 5px, 10px, 20px, 40px, 60px`.
 
@@ -174,7 +178,7 @@ You can replace the `p` in all these examples to use margin instead of padding.
 
 ### Mobile First
 
-As with the sizing classes, these are mobile first, so you don't need to apply spacing at every breakpoint, just at the lowest point. 
+As with the sizing classes, these are mobile first, so you don't need to apply spacing at every breakpoint, just at the lowest point.
 
 For example, if you wanted 20px padding on all sides at every breakpoint, just apply it at 4 columns: `rg-p4at4`. This will affect every breakpoint above it.
 
