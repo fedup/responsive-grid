@@ -1,10 +1,6 @@
 {
   "name": "responsive-grid",
-  "version": "0.1.0",
-  "development": {
-    "fedup/fractional-widths": "0.1.0",
-    "fedup/spacing-classes": "0.1.0"
-  },
+  "version": "1.0.0",
   "styles": [
     "index.css"
   ]
